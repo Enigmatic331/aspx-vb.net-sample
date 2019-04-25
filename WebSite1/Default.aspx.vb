@@ -116,7 +116,7 @@ Partial Class Default2
         updCmd.Parameters.Add("@pttlSupply", SqlDbType.Int)
         updCmd.Parameters("@pttlSupply").Value = inttotalSupply
         updCmd.ExecuteNonQuery()
-        conn.Close()
+        'conn.Close()
 
         tblGridView.EditIndex = -1
 
