@@ -37,8 +37,18 @@
 &nbsp;&nbsp;&nbsp;
             <asp:Button ID="btnDel" runat="server" Text="Refresh" />
             <br />
-            <asp:Table ID="tblDisplay" runat="server" Height="752px" Width="1804px">
-            </asp:Table>
+            <br />
+            <asp:GridView ID="tblGridView" runat="server" OnRowUpdating="OnRowUpdating" OnRowEditing="OnRowEditing" AutoGenerateColumns="False" Height="279px" Width="1675px" EmptyDataText="There are no data records to display.">
+                <Columns>
+                    <asp:BoundField AccessibleHeaderText="colID" DataField="ID" HeaderText="#" ReadOnly="True" />
+                    <asp:BoundField AccessibleHeaderText="colSymbol" DataField="symbol" HeaderText="Symbol" />
+                    <asp:BoundField AccessibleHeaderText="colName" DataField="name" HeaderText="Name" />
+                    <asp:BoundField AccessibleHeaderText="colContractAdd" DataField="contract_address" HeaderText="Contract Address" />
+                    <asp:BoundField AccessibleHeaderText="colTotalSupply" DataField="totalSupply" HeaderText="Total Supply" />
+                    <asp:BoundField AccessibleHeaderText="colTotalHolders" DataField="total_holders" HeaderText="Total Holders" />
+                    <asp:CommandField CancelText="" DeleteText="" InsertText="" ShowEditButton="True" />
+                </Columns>
+            </asp:GridView>
         </div>
     </form>
 </body>
